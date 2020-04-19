@@ -7,6 +7,14 @@
         width: 120px;
         height: 60px;
     }
+
+    @media screen and (max-width: 430px) {
+        grid-template-columns: 1fr;
+
+        div {
+            width: 100%;
+        }
+    }
 }
 
 .vermelho {

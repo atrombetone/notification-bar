@@ -14,4 +14,9 @@
         width: 120px;
         border: solid thin black;
     }
+
+    @media screen and (max-width: 430px) {
+        flex-direction: column;
+        height: 100px;
+    }
 }
