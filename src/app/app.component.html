@@ -1,0 +1,15 @@
+<ui-notification-bar
+  text="Bem vindo visitante!!!"
+  textButton="Entendi"
+  [(barCollor)]="corSelecionada"
+  (onClickButton)="onClickEvent($event)"
+></ui-notification-bar>
+
+<div class="btns">
+  <div class="vermelho" (click)="mudarCorPara(vermelho)"></div>
+  <div class="azul" (click)="mudarCorPara(azul)"></div>
+  <div class="verde" (click)="mudarCorPara(verde)"></div>
+  <div class="amarelo" (click)="mudarCorPara(amarelo)"></div>
+</div>
+
+<router-outlet></router-outlet>

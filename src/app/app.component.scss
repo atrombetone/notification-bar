@@ -1,0 +1,26 @@
+.btns {
+    padding: 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    div {
+        width: 120px;
+        height: 60px;
+    }
+}
+
+.vermelho {
+    background-color: #f00;
+}
+
+.azul {
+    background-color: #0627D9;
+}
+
+.verde {
+    background-color: #00A500;
+}
+
+.amarelo {
+    background-color: #FFE800;
+}
