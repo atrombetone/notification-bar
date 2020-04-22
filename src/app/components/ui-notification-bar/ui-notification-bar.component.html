@@ -1,6 +1,7 @@
-<div class="ui-notification-bar" [ngStyle]="{'background-color': barCollor}">
-    <p>
-      {{text}}
-    </p>
-     <button (click)="onClick($event)">{{textButton}}</button>
+<div class="ui-notification-bar" [ngStyle]="{'background-color': barCollor}" [@EnterLeave]="'flyIn'">
+  <div *ngFor="let item of items">
+    <ui-icon-item *ngIf="isIcon(item)" [value]="item.value"></ui-icon-item>
+    <ui-text-item *ngIf="isText(item)" [value]="item.value"></ui-text-item>
+    <ui-link-item *ngIf="isLink(item)" [value]="item.value" [callBack]="item.action"></ui-link-item>
+  </div> 
 </div>

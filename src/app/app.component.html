@@ -1,9 +1,29 @@
-<ui-notification-bar
+ <!--<ui-notification-bar
   text="Bem vindo visitante!!!"
   textButton="Entendi"
   [(barCollor)]="corSelecionada"
   (onClickButton)="onClickEvent($event)"
 ></ui-notification-bar>
+
+<br><br>
+<ui-notification-bar-new
+  text="Implementacao com ng-content"
+  textButton=""
+  [(barCollor)]="corSelecionada"
+  (onClickButton)="onClickEvent($event)"
+>
+  Para maiores informações <a href="" (click)="onClickEvent($event)">clique aqui</a>, ou não!!!
+</ui-notification-bar-new>
+
+<br><br>
+<ui-notification-bar-pipe
+  text="Implementacao com pipe"
+  textButton=""
+  [(barCollor)]="corSelecionada"
+  (onClickButton)="onClickEvent($event)"
+>
+  Para maiores informações <a href="#">clique aqui</a>, ou não!!!
+</ui-notification-bar-pipe>
 
 <div class="btns">
   <div class="vermelho" (click)="mudarCorPara(vermelho)"></div>
@@ -12,4 +32,12 @@
   <div class="amarelo" (click)="mudarCorPara(amarelo)"></div>
 </div>
 
+ {{screenHeight}} X {{screenWidth }} -->
 <router-outlet></router-outlet>
+
+
+<ul>
+  <li [routerLink]="['/']">Home</li>
+  <li [routerLink]="['/simple']">Simple Text</li>
+  <li [routerLink]="['/bar']">Barra</li>
+</ul>
