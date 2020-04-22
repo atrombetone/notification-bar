@@ -1,1 +1,12 @@
-<ui-notification-bar [items]="items"></ui-notification-bar>
+<ui-notification-bar 
+    [items]="items" 
+    (action)="carregarServico()"
+    [(type)]="selectedType"
+></ui-notification-bar>
+
+<div class="buttons">
+    <button (click)="atualizarTipo(0)">Normal</button>
+    <button (click)="atualizarTipo(3)">Atenção</button>
+    <button (click)="atualizarTipo(2)">Erro</button>
+    <button (click)="atualizarTipo(1)">Sucesso</button>
+</div>

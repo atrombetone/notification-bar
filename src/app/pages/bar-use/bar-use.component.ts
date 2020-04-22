@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Item, ItemType } from 'src/app/models/item';
+import { ClientesService } from 'src/app/services/clientes.service';
+import { NotificationType } from 'src/app/models/notification-type';
 
 @Component({
   selector: 'app-bar-use',
@@ -9,19 +11,25 @@ import { Item, ItemType } from 'src/app/models/item';
 export class BarUseComponent implements OnInit {
 
   items: Item[] = [];
-  constructor() { }
+  selectedType: NotificationType;
+
+  constructor(private service: ClientesService) { }
 
   ngOnInit() {
     this.items.push({type: ItemType.icon, value: 'account_circle'});
     this.items.push({type: ItemType.text, value: 'Para maiores informação e'});
-    this.items.push({type: ItemType.link, value: 'clique aqui', action: function () {
-      alert('Clicou nessa jossa'); 
-    }});
+    this.items.push({type: ItemType.link, value: 'clique aqui'}); 
     this.items.push({type: ItemType.text, value: 'e analise os dados'});
   }
 
-  metodoClique(event) {
-    alert(event);
-  } 
+  carregarServico() {
+    this.service.get('Teste').subscribe(data => {
+      alert(JSON.stringify(data));
+    });
+  }
+
+  atualizarTipo(tipo: number) {
+    this.selectedType = tipo;
+  }
 
 }

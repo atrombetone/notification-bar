@@ -1,40 +1,4 @@
-.btns {
-    padding: 80px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    div {
-        width: 120px;
-        height: 60px;
-    }
-
-    @media screen and (max-width: 430px) {
-        grid-template-columns: 1fr;
-
-        div {
-            width: 100%;
-        }
-    }
-}
-
-.vermelho {
-    background-color: #f00;
-}
-
-.azul {
-    background-color: #0627D9;
-}
-
-.verde {
-    background-color: #00A500;
-}
-
-.amarelo {
-    background-color: #FFE800;
-}
-
 ul {
-    margin-top: 50px;
     list-style-type: none;
     li {
         background-color: aqua;

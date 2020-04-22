@@ -8,20 +8,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class UiLinkItemComponent implements OnInit {
 
   @Input()
-  value = '';
+  value = '';;
 
-  @Input()
-  callBack: Function;
-  
   constructor() { }
 
   ngOnInit() {
   }
-
-  onClick(event) {
-    if(this.callBack) {
-      this.callBack();
-    }
-  }
-
 }

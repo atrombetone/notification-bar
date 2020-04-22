@@ -1,3 +1,5 @@
+import { EventEmitter } from '@angular/core';
+
 export enum ItemType {
     icon = 0,
     link = 1,
@@ -6,5 +8,4 @@ export enum ItemType {
 export interface Item {
     type: ItemType;
     value: string;
-    action?: Function;
 }
